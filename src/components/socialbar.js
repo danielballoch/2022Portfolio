@@ -5,9 +5,10 @@ import {css} from '@emotion/react';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const NavDiv = styled.div`
-width: 900px;
-margin: auto;
+position: fixed;
+bottom: 0;
 display: flex;
+flex-direction: column;
 justify-content: flex-end;
 a {
     padding: 30px;
@@ -18,10 +19,9 @@ a {
 export default function Nav(){
     return(
         <NavDiv>
-            <a>Home</a>
-            <a>About</a>
-            <a>Projects</a>
-            <a>Contact</a>
+            <a>Github</a>
+            <a>Dribble</a>
+            <a>Linkedin</a>
         </NavDiv>
     )
 }

@@ -8,7 +8,10 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 p {
-    max-width: 600px;
+    max-width: 500px;
+}
+.image-div {
+    padding: 20px;
 }
 .text-content {
     display: flex; 
@@ -39,6 +42,7 @@ p {
 }
 img {
     border-radius: 20px;
+
 }
 `
 const techlist1 = ["Adobe XD", "CSS", "React", "Next.js"]
@@ -49,8 +53,8 @@ export default function About (){
         <AboutDiv>
             <div className="text-content">
                 <h1>About Me</h1>
-                <p>I've been interested in web design and development since 2018, and have been learning on and off, along side full time jobs, since then.</p>
-                <p>These past couple years I've transitioned to a semi-part time job and got my first few paid freelance jobs, under the name 'thoughtfulHQ', but have decided I want to find a junior role/front end development role in an already established business. This way I can commit to development full time, learn from like-minded people, and make a real career out of it. </p>
+                <p>I first got interested in web design and development around 2018, and have been learning on and off, while contracting and working other jobs, since then.</p>
+                <p>I've done a few freelance websites for clients, under the name 'thoughtfulHQ', but have decided I want to find a junior role/front end development role in an already established business. This way I can commit to development full time, learn from like-minded people, and make a real career out of it. </p>
                 <p>Technologies I've been working with:</p>
                 <div className="tech"> 
                     <div className="row">
@@ -66,7 +70,7 @@ export default function About (){
                     
                 </div>
             </div>
-            <div>
+            <div className="image-div">
                 <StaticImage src="../images/tongareroCrossing.jpg" alt="Daniel Balloch on top of Togariro Crossing" width={450}/>
             </div>
         </AboutDiv>

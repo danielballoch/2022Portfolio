@@ -3,7 +3,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import { Global, css } from '@emotion/react'
-// import Nav from './nav'
+import Nav from './nav'
+import SocialBar from "./socialbar"
 // import Footer from './footer'
 import styled from '@emotion/styled';
 
@@ -59,7 +60,8 @@ const Layout = ({ title, children}) => {
           `}
         />
 
-        {/* <Nav pageLocation={pageLocation} /> */}
+        <Nav/>
+        <SocialBar/>
         {/* <CookieTest>hello</CookieTest> */}
         <main>{children}</main>
         {/* <Footer hideFooter={hideFooter}/> */}
