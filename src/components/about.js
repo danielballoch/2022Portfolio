@@ -50,7 +50,7 @@ const techlist2 = ["HTML", "JavaScript", "Gatsby.js", "Node.js","TypeScript"]
 
 export default function About (){
     return(
-        <AboutDiv>
+        <AboutDiv id="about">
             <div className="text-content">
                 <h1>About Me</h1>
                 <p>I first got interested in web design and development around 2018, and have been learning on and off, while contracting and working other jobs, since then.</p>

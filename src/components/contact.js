@@ -173,7 +173,7 @@ const Contact = () => {
           }
       })
     return(
-        <div style={{ display: "grid", width: "100%", }} id="contactSection" >
+        <div style={{ display: "grid", width: "100%", }} id="contact" >
         <div
             style={{
             // By using the same grid area for both, they are stacked on top of each other

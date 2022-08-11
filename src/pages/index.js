@@ -10,10 +10,11 @@ import Layout from "../components/layout.js"
 const IndexPage = () => {
   return (
     <Layout>
-            <Hero/>
-            <About/>
-            <Projects/>
-            <Contact/>
+            <Nav/>
+            <Hero id="hero"/>
+            <About id="about"/>
+            <Projects id="projects"/>
+            <Contact id="contact"/>
     </Layout>
   )
 }

@@ -8,7 +8,10 @@ display: flex;
         display: flex;
         flex-direction: column;
         width: 800px;
-        margin: auto;
+        justify-content: center;
+
+        margin: 0 auto 118px auto;
+        /* margin-bottom: 116px; */
         h1 {
             font-size: 70px;
             margin: 0;
@@ -37,7 +40,7 @@ display: flex;
 
 export default function Hero (){
     return(
-        <HeroDiv>
+        <HeroDiv id="home">
             <div>
                 <p>Hello, my name is</p>
                 <h1>Daniel Balloch.</h1>

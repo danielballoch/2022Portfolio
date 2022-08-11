@@ -39,6 +39,9 @@ const Layout = ({ title, children}) => {
       </Helmet>
       <Global
           styles={css`
+            html {
+                scroll-behavior: smooth;
+            }
             body {
               margin: 0;
               padding: 0;
@@ -60,7 +63,7 @@ const Layout = ({ title, children}) => {
           `}
         />
 
-        <Nav/>
+        {/* <Nav/> */}
         <SocialBar/>
         {/* <CookieTest>hello</CookieTest> */}
         <main>{children}</main>

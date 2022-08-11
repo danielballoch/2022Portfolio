@@ -56,7 +56,7 @@ button {
 
 export default function Projects (){
     return(
-        <ProjectDiv>
+        <ProjectDiv id="projects">
             <h1>Featured Projects</h1>
             <div className="project">
                 {/* <StaticImage src="../images/projects/glacier.png" width={900}/> */}
