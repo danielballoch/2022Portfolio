@@ -6,11 +6,20 @@ const HeroDiv = styled.div`
 height: 100vh;
 display: flex;
     div {
+        @media(max-width: 500px){
+            padding: 20px;
+            margin: auto;
+            p {
+                max-width: 300px !important;
+                width: 100% !important;
+               
+            }
+        }
         display: flex;
         flex-direction: column;
-        width: 800px;
+        width: 100%;
+        max-width: 800px;
         justify-content: center;
-
         margin: 0 auto 118px auto;
         /* margin-bottom: 116px; */
         h1 {
@@ -23,7 +32,8 @@ display: flex;
         }
         button {
             padding: 10px 40px;
-            width: 300px;
+            max-width: 300px;
+            width: 100%;
             font-size: 16px;
             background: none;
             border: solid black 1px;

@@ -34,7 +34,7 @@ height: 700px;
 `
 
 const ContactDiv = styled.div`
-width: 800px;
+max-width: 800px;
 background-color: white;
 display: flex;
 flex-direction: column;
@@ -46,6 +46,7 @@ margin-bottom: 200px;
     display: none;
 }
 h1 {
+    padding: 0 20px;
     @media (max-width: 810px) {
     font-size: 50px;
     letter-spacing: 0;
@@ -62,10 +63,14 @@ h1 {
         list-style: none;
     }
 } 
+.contact-text {
+    padding: 0 20px;
+}
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 20px;
     p {
         margin-bottom: 2px;
     }
@@ -202,7 +207,7 @@ const Contact = () => {
             </span>
             {/* <MobileId id="contactM"/> */}
             <h1 id="contactM">Contact</h1>
-            <p>To get in touch email me at daniel@thoughtfulhq.com, call (+64) 22 078 0868, or fill out the form below.</p>
+            <p className="contact-text">To get in touch email me at daniel@thoughtfulhq.com, call (+64) 22 078 0868, or fill out the form below.</p>
             <div>
                 <form 
                 onSubmit={handleSubmit(onSubmit)}

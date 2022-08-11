@@ -9,9 +9,19 @@ import GlacierVideo from "../images/projects/GlacierVideoCrop.mp4"
 import Video from "../components/video"
 
 const ProjectDiv = styled.div`
+@media(max-width: 900px){
+    .project-text {
+        flex-direction: column;
+        padding: 0 10px;
+        .icon {
+            width: 140px;
+        }
+    }
+}
 display: flex;
 flex-direction: column;
-width: 900px;
+width: 100%;
+max-width: 900px;
 margin: 250px auto;
 .project {
     margin-bottom: 100px;
@@ -25,11 +35,12 @@ margin: 250px auto;
     }
 }
 .glacier-video {
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
     div {
-        height: 514px;
+        max-height: 514px;
     }
-    height: 514px;
+    max-height: 514px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .rq-image {

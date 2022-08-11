@@ -3,6 +3,14 @@ import styled from '@emotion/styled';
 import { StaticImage } from "gatsby-plugin-image"
 
 const AboutDiv = styled.div`
+@media(max-width: 900px){
+    flex-direction: column-reverse;
+    .text-content {
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+    
+}
 display: flex; 
 flex-direction: row;
 justify-content: center;
