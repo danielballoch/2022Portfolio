@@ -5,6 +5,9 @@ import {css} from '@emotion/react';
 import { StaticImage } from "gatsby-plugin-image";
 
 const NavDiv = styled.div`
+@media(max-width: 900px){
+            display: none;
+}
 position: fixed;
 bottom: 0;
 display: flex;

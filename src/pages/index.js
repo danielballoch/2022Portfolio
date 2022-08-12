@@ -10,7 +10,7 @@ import Layout from "../components/layout.js"
 const IndexPage = () => {
   return (
     <Layout>
-            <Nav/>
+            {/* <Nav/> */}
             <Hero id="hero"/>
             <About id="about"/>
             <Projects id="projects"/>

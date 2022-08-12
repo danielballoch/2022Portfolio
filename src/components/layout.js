@@ -63,7 +63,7 @@ const Layout = ({ title, children}) => {
           `}
         />
 
-        {/* <Nav/> */}
+        <Nav/>
         <SocialBar/>
         {/* <CookieTest>hello</CookieTest> */}
         <main>{children}</main>

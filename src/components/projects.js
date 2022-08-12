@@ -10,6 +10,9 @@ import Video from "../components/video"
 
 const ProjectDiv = styled.div`
 @media(max-width: 900px){
+    h1 {
+        padding: 0 10px;
+    }
     .project-text {
         flex-direction: column;
         padding: 0 10px;
