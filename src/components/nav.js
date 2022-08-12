@@ -144,22 +144,23 @@ const NavDiv = styled.div`
 export default function Nav(){
     const [offset, setOffset] = useState(0);
     const [scrollUp, setScrollUp] = useState(true);
-    const [MenuOpen, setMenuOpen] = useState(true);
-
-    useEffect(() => {
+    const [MenuOpen, setMenuOpen] = useState(false);
     if (typeof window !== `undefined`) {
-        window.onscroll = () => {
-            setOffset(window.scrollY);
-        if (offset > window.scrollY && scrollUp !== true){
-            console.log("hello1");
-            setScrollUp(true);
-        } else if (offset < window.scrollY && scrollUp !== false && window.scrollY > 100 && !MenuOpen) {
-            setScrollUp(false);     
-            console.log("hello2");
+        useEffect(() => {
+        if (typeof window !== `undefined`) {
+            window.onscroll = () => {
+                setOffset(window.scrollY);
+            if (offset > window.scrollY && scrollUp !== true){
+                console.log("hello1");
+                setScrollUp(true);
+            } else if (offset < window.scrollY && scrollUp !== false && window.scrollY > 100 && !MenuOpen) {
+                setScrollUp(false);     
+                console.log("hello2");
+            }
+            }
         }
-        }
+        }, [window.onscroll])
     }
-    }, [window.onscroll])
     console.log(scrollUp)
     return(
         <NavDiv >
