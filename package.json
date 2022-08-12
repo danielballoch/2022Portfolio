@@ -17,6 +17,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+    "@sendgrid/mail": "^7.7.0",
     "gatsby": "^4.20.0",
     "gatsby-plugin-emotion": "^7.20.0",
     "gatsby-plugin-image": "^2.20.0",
