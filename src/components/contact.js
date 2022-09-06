@@ -143,11 +143,6 @@ const Contact = () => {
       async function onSubmit(data){
         const token = await reRef.current.executeAsync();
         reRef.current.reset();
-        console.log("this is where form data should log")
-        console.log(data)
-        console.log(token)
-        
-        
         fetch(`/api/sendgrid`, {
           method: `POST`,
           body: JSON.stringify({
@@ -155,7 +150,7 @@ const Contact = () => {
             phone: data.Phone,
             email: data.Email,
             message:data.Message,
-            token,
+            token
         }),
           headers: {
             "content-type": `application/json`,
