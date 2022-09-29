@@ -1,4 +1,5 @@
 import { React } from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import styled from '@emotion/styled';
 import resume from "../../static/DanielBallochResume2022.pdf"
 
@@ -51,14 +52,31 @@ display: flex;
 
 export default function Hero (){
     return(
-        <HeroDiv id="home">
-            <div>
-                <p>Hello, my name is</p>
-                <h1>Daniel Balloch.</h1>
-                <h1>I make websites.</h1>
-                <p>I'm a front end developer and founder of thoughtfulHQ, a small web development agency in New Zealand.</p>
-                <a href={resume} target="_blank" rel="noopener noreferrer"><button ><b>Here's my Resume</b></button></a>
-            </div>
-        </HeroDiv>
+        <div style={{ display: "grid"}}>
+            <StaticImage  
+                    style={{
+                    gridArea: "1/1",
+                    maxHeight: "100%",
+                    width: "100%",
+                    height: "100vh",
+                    marginBottom: "100px",
+                    opacity: "1",
+                    }}
+                    // layout="fullWidth"
+                    objectPosition={"left"}
+                    alt=""
+                    src={"../images/WhiteBackground3.jpeg"}
+                    formats={["auto", "webp", "avif"]}
+            />
+            <HeroDiv id="home" style={{ display: "grid",gridArea: "1/1", maxHeight: 900, marginTop: 100,position: "relative",}}>
+                    <div>
+                        <p>Hello, my name is</p>
+                        <h1>Daniel Balloch.</h1>
+                        <h1>I make websites.</h1>
+                        <p>I'm a front end developer and founder of thoughtfulHQ, a small web development agency in New Zealand.</p>
+                        <a href={resume} target="_blank" rel="noopener noreferrer"><button ><b>Here's my Resume</b></button></a>
+                    </div>
+            </HeroDiv>
+        </div>
     )
 }

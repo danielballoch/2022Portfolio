@@ -30,6 +30,11 @@ const NavDiv = styled.div`
         padding: 30px;
         color: inherit;
         text-decoration: none;
+        transition: .3s;
+        border-bottom: 2px solid rgba(0,0,0,0);
+        :hover {
+            border-bottom: 2px solid rgba(0,0,0,1);
+        }
     }
 }
 
@@ -38,6 +43,9 @@ const NavDiv = styled.div`
     @media(min-width: 900px){
         background-color: rgba(255,255,255,0.98);
     }
+}
+.Initial {
+    background-color: rgba(255,255,255,0);
 }
 
 
@@ -143,28 +151,33 @@ const NavDiv = styled.div`
 
 export default function Nav(){
     const [offset, setOffset] = useState(0);
+    const [initial, setInitial] = useState(true);
     const [scrollUp, setScrollUp] = useState(true);
     const [MenuOpen, setMenuOpen] = useState(false);
-    if (typeof window !== `undefined`) {
         useEffect(() => {
         if (typeof window !== `undefined`) {
             window.onscroll = () => {
                 setOffset(window.scrollY);
-            if (offset > window.scrollY && scrollUp !== true){
-                console.log("hello1");
-                setScrollUp(true);
-            } else if (offset < window.scrollY && scrollUp !== false && window.scrollY > 100 && !MenuOpen) {
-                setScrollUp(false);     
-                console.log("hello2");
-            }
+                console.log(offset)
+                if (offset > window.scrollY && scrollUp !== true){
+                    console.log("hello1");
+                    setScrollUp(true);
+                } else if (offset < window.scrollY && scrollUp !== false && window.scrollY > 100 && !MenuOpen) {
+                    setScrollUp(false);     
+                    console.log("hello2");
+                }
+                if (offset <= 10){
+                    setInitial(true)
+                } else if (offset !== 0 && initial !== false){
+                    setInitial(false)
+                }
             }
         }
         }, [window.onscroll])
-    }
     console.log(scrollUp)
     return(
         <NavDiv >
-            <div className={scrollUp? "NavBar Scroll" : "NavBar"}>
+            <div className={scrollUp && initial? "NavBar Scroll Initial" : scrollUp? "NavBar Scroll" : "NavBar"}>
                 <div className="NavBarInner">
                     <Link to="/#home">Home</Link>
                     <Link to="/#about">About</Link>
