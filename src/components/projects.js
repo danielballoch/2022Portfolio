@@ -81,7 +81,7 @@ export default function Projects (){
                     <StaticImage src="../images/projects/GlacierIcon.png" className="icon"/>
                     <div className="">
                         <p>Tools: HTML, CSS, Gatsby.js, React, node.js, TypeScript, Xero API, Sendgrid API, Google Re-captcha.</p>
-                        <a href="https://glacier.thoughtfulhq.com" target="_blank"><p>Live Site: https://www.glacier.thoughtfulhq.com</p></a>
+                        <a href="https://glacier.nz" target="_blank"><p>Live Site: https://www.glacier.nz</p></a>
                     </div>
                 </div>
             </div>
