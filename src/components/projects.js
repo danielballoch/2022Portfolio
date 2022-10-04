@@ -86,18 +86,18 @@ export default function Projects (){
                     <StaticImage src="../images/projects/GlacierIcon.png" className="icon"/>
                     <div className="">
                         <p>Tools: HTML, CSS, Gatsby.js, React, node.js, TypeScript, Xero API, Sendgrid API, Google Re-captcha.</p>
-                        <a href="https://glacier.nz" target="_blank"><p>Live Site: https://www.glacier.nz</p></a>
+                        <p>Live Site: <a href="https://glacier.nz" target="_blank">https://www.glacier.nz</a><a>Project Overview</a></p>
                     </div>
                 </div>
             </StyledLink>
-            <StyledLink to="/projects/glacier-international" className="project">
+            <StyledLink to="/projects/rob-quin" className="project">
                 <div className="project">
                     <StaticImage className="rq-image" src="../images/projects/robquin.png" width={900}/>
                     <div className="project-text">
                         <StaticImage src="../images/projects/RobQuinIcon.png" className="icon"/>
                         <div className="">
                             <p>Tools: HTML, CSS, React.js, Gatsby.js, getForm API </p>
-                            <a href="https://www.robquin.co.nz" target="_blank"><p>Live site: https://www.robquin.co.nz</p></a>
+                            <p>Live site: <a href="https://www.robquin.co.nz" target="_blank">https://www.robquin.co.nz</a></p>
                         </div>
                     </div>
                 </div>
