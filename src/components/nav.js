@@ -156,7 +156,7 @@ export default function Nav(){
     const [MenuOpen, setMenuOpen] = useState(false);
 
 
-    if (typeof window !== `undefined`) {
+    // if (typeof window !== `undefined`) {
         useEffect(() => {
         if (typeof window !== `undefined`) {
             window.onscroll = () => {
@@ -177,7 +177,7 @@ export default function Nav(){
             }
         }
         }, [window.onscroll])
-    }
+    // }
     console.log(scrollUp)
     return(
         <NavDiv >

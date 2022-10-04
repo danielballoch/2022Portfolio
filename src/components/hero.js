@@ -68,7 +68,7 @@ export default function Hero (){
                     src={"../images/WhiteBackground3.jpeg"}
                     formats={["auto", "webp", "avif"]}
             />
-            <HeroDiv id="home" style={{ display: "grid",gridArea: "1/1", maxHeight: 900, marginTop: 100,position: "relative",}}>
+            <HeroDiv id="home" style={{ display: "grid",gridArea: "1/1", maxHeight: 900, marginTop: 0,position: "relative",}}>
                     <div>
                         <p>Hello, my name is</p>
                         <h1>Daniel Balloch.</h1>

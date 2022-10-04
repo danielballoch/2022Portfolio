@@ -1,4 +1,5 @@
 import { React } from "react"
+import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from '@emotion/styled';
 import GlacierIcon from "../images/projects/GlacierIcon.png";
@@ -7,6 +8,10 @@ import RobQuinIcon from "../images/projects/RobQuinIcon.png";
 import RobQuinBG from "../images/projects/robquin.png";
 import GlacierVideo from "../images/projects/GlacierVideoCrop.mp4"
 import Video from "../components/video"
+
+const StyledLink = styled(Link)`
+text-decoration: none;
+`
 
 const ProjectDiv = styled.div`
 @media(max-width: 900px){
@@ -72,7 +77,7 @@ export default function Projects (){
     return(
         <ProjectDiv id="projects">
             <h1>Featured Projects</h1>
-            <div className="project">
+            <StyledLink to="/projects/glacier-international" className="project">
                 {/* <StaticImage src="../images/projects/glacier.png" width={900}/> */}
                 <div className="glacier-video">
                     <Video videoSrcURL={GlacierVideo} videoTitle="Glacier Project Video"/>
@@ -84,17 +89,19 @@ export default function Projects (){
                         <a href="https://glacier.nz" target="_blank"><p>Live Site: https://www.glacier.nz</p></a>
                     </div>
                 </div>
-            </div>
-            <div className="project">
-                <StaticImage className="rq-image" src="../images/projects/robquin.png" width={900}/>
-                <div className="project-text">
-                    <StaticImage src="../images/projects/RobQuinIcon.png" className="icon"/>
-                    <div className="">
-                        <p>Tools: HTML, CSS, React.js, Gatsby.js, getForm API </p>
-                        <a href="https://www.robquin.co.nz" target="_blank"><p>Live site: https://www.robquin.co.nz</p></a>
+            </StyledLink>
+            <StyledLink to="/projects/glacier-international" className="project">
+                <div className="project">
+                    <StaticImage className="rq-image" src="../images/projects/robquin.png" width={900}/>
+                    <div className="project-text">
+                        <StaticImage src="../images/projects/RobQuinIcon.png" className="icon"/>
+                        <div className="">
+                            <p>Tools: HTML, CSS, React.js, Gatsby.js, getForm API </p>
+                            <a href="https://www.robquin.co.nz" target="_blank"><p>Live site: https://www.robquin.co.nz</p></a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </StyledLink>
             <button><b>view all projects</b></button>
         </ProjectDiv>
     )

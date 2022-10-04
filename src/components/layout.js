@@ -10,8 +10,8 @@ import styled from '@emotion/styled';
 
 
 
-const Layout = ({ title, children}) => {
-
+const Layout = ({ title, children, showSocial}) => {
+    console.log("social", showSocial)
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -64,7 +64,7 @@ const Layout = ({ title, children}) => {
         />
 
         <Nav/>
-        <SocialBar/>
+        <SocialBar showSocial={showSocial}/>
         {/* <CookieTest>hello</CookieTest> */}
         <main>{children}</main>
         {/* <Footer hideFooter={hideFooter}/> */}

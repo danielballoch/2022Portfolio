@@ -5,6 +5,9 @@ import {css} from '@emotion/react';
 import { StaticImage } from "gatsby-plugin-image";
 
 const NavDiv = styled.div`
+.hide {
+display: none;
+}
 z-index: 100;
 @media(max-width: 900px){
             display: none;
@@ -23,12 +26,13 @@ margin-bottom:20px;
 `
 
 
-export default function Nav(){
+export default function Nav({showSocial}){
+    console.log("side:",showSocial)
     return(
         <NavDiv>
-            <a href="https://github.com/danielballoch" target="_blank"><StaticImage width={50} src="../images/social/githubRe.png"/></a>
-            <a href="https://www.linkedin.com/in/danielpatrickballoch/" target="_blank"><StaticImage width={50} src="../images/social/linkediniconRe.png"/></a>
-            <a href="https://dribbble.com/danielballoch" target="_blank"><StaticImage width={50} src="../images/social/dribbleiconRe.png"/></a>
+            <a className={showSocial === false? "hide" : ""} href="https://github.com/danielballoch" target="_blank"><StaticImage width={50} src="../images/social/githubRe.png"/></a>
+            <a className={showSocial === false? "hide" : ""} href="https://www.linkedin.com/in/danielpatrickballoch/" target="_blank"><StaticImage width={50} src="../images/social/linkediniconRe.png"/></a>
+            {/* <a className={showSocial === false? "hide" : ""} href="https://dribbble.com/danielballoch" target="_blank"><StaticImage width={50} src="../images/social/dribbleiconRe.png"/></a> */}
         </NavDiv>
     )
 }
