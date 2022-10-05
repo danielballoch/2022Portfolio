@@ -12,6 +12,10 @@ import Video from "../components/video"
 const StyledLink = styled(Link)`
 text-decoration: none;
 `
+const StyledLink2 = styled(Link)`
+display: flex;
+text-decoration: none;
+`
 
 const ProjectDiv = styled.div`
 @media(max-width: 900px){
@@ -32,7 +36,10 @@ width: 100%;
 max-width: 900px;
 margin: 250px auto;
 .project {
-    margin-bottom: 100px;
+    margin-bottom: 90px;
+}
+.project-last {
+    margin-bottom: 20px;
 }
 .project-text {
     margin: 0px;
@@ -77,21 +84,23 @@ export default function Projects (){
     return(
         <ProjectDiv id="projects">
             <h1>Featured Projects</h1>
-            <StyledLink to="/projects/glacier-international" className="project">
+            <StyledLink to="/projects/glacier-international" >
                 {/* <StaticImage src="../images/projects/glacier.png" width={900}/> */}
-                <div className="glacier-video">
-                    <Video videoSrcURL={GlacierVideo} videoTitle="Glacier Project Video"/>
-                </div>
-                <div className="project-text">
-                    <StaticImage src="../images/projects/GlacierIcon.png" className="icon"/>
-                    <div className="">
-                        <p>Tools: HTML, CSS, Gatsby.js, React, node.js, TypeScript, Xero API, Sendgrid API, Google Re-captcha.</p>
-                        <p>Live Site: <a href="https://glacier.nz" target="_blank">https://www.glacier.nz</a><a>Project Overview</a></p>
+                <div className="project">
+                    <div className="glacier-video">
+                        <Video videoSrcURL={GlacierVideo} videoTitle="Glacier Project Video"/>
+                    </div>
+                    <div className="project-text">
+                        <StaticImage src="../images/projects/GlacierIcon.png" className="icon"/>
+                        <div className="">
+                            <p>Tools: HTML, CSS, Gatsby.js, React, node.js, TypeScript, Xero API, Sendgrid API, Google Re-captcha.</p>
+                            <p>Live Site: <a href="https://glacier.nz" target="_blank">https://www.glacier.nz</a></p>
+                        </div>
                     </div>
                 </div>
             </StyledLink>
-            <StyledLink to="/projects/rob-quin" className="project">
-                <div className="project">
+            <StyledLink to="/projects/rob-quin">
+                <div className="project project-last">
                     <StaticImage className="rq-image" src="../images/projects/robquin.png" width={900}/>
                     <div className="project-text">
                         <StaticImage src="../images/projects/RobQuinIcon.png" className="icon"/>
@@ -102,7 +111,7 @@ export default function Projects (){
                     </div>
                 </div>
             </StyledLink>
-            <button><b>view all projects</b></button>
+            <StyledLink2 to="/projects"><button><b>view all projects</b></button></StyledLink2>
         </ProjectDiv>
     )
 }
