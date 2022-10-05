@@ -161,13 +161,13 @@ export default function Nav(){
         if (typeof window !== `undefined`) {
             window.onscroll = () => {
                 setOffset(window.scrollY);
-                console.log(offset)
+                // console.log(offset)
                 if (offset > window.scrollY && scrollUp !== true){
-                    console.log("hello1");
+                    // console.log("hello1");
                     setScrollUp(true);
                 } else if (offset < window.scrollY && scrollUp !== false && window.scrollY > 100 && !MenuOpen) {
                     setScrollUp(false);     
-                    console.log("hello2");
+                    // console.log("hello2");
                 }
                 if (offset <= 10){
                     setInitial(true)
@@ -178,7 +178,7 @@ export default function Nav(){
         }
         }, [window.onscroll])
     }
-    console.log(scrollUp)
+    // console.log(scrollUp)
     return(
         <NavDiv >
             <div className={scrollUp && initial? "NavBar Scroll Initial" : scrollUp? "NavBar Scroll" : "NavBar"}>

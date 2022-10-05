@@ -17,6 +17,9 @@ h1 {
     font-size: 70px;
 }
 .image {
+    @media(max-width: 596px){
+        width: 80%;
+    }
     width: 40%;
     max-width: 500px;
     margin: 30px;
@@ -48,8 +51,9 @@ export default function Projects(){
                 <StaticImage className="image" src="../images/projects/PMDPainting.png" width={900} transformOptions={{cropFocus: "top"}}
                 />
                 <StaticImage className="image" src="../images/projects/PukekoPreschool.png" width={900}/>
-                <StaticImage className="image" src="../images/projects/TheRoamingGiant.png" width={900}/>
+                <StaticImage className="image" src="../images/projects/RoamingGiant.png" width={900}/>
                 <StaticImage className="image" src="../images/projects/Pascoes.png" width={900}/>
+                <StaticImage className="image" src="../images/projects/Vanman.png" width={900}/>
                 
             </Wrapper>
         </Layout>
