@@ -98,11 +98,11 @@ const GlacierPage = () => {
                 <p>This project was a website for Rob Quin, a sole barrister in Hamilton.</p>
                 <br/>
                 <h2>Context & Aim</h2>
-                <p>Rob had an older website with his basic info already laid out, but needed something that was mobile friendly and had a contact form to improve his workflow and client experience.</p>
+                <p>Rob had an older website with his basic info already laid out but needed something that was mobile friendly and had a contact form to improve his workflow and client experience.</p>
                 <br/>
                 <h2>Design</h2>
-                <p>His wife made the previous design and so I tried to keep much of the elements the same and just refesh things. I created a few collage options for the background with stock photos and a simple responsive design to fit his industry and brand.</p>
-                <p>The original website had multiple pages, with the new design I opted to keep everything (bar the privacy policy) on one page for a simplier user experience.</p>
+                <p>His wife made the previous design and so I tried to keep much of the elements the same and just refresh things. I created a few collage options for the background with stock photos and a simple responsive design to fit his industry and brand.</p>
+                <p>The original website had multiple pages, with the new design I opted to keep everything (bar the privacy policy) on one page for a simpler user experience.</p>
                 <StaticImage src="../../images/projects/RQbefore.png" className="icon"/>
                 <StaticImage src="../../images/projects/RQafter.png" className="icon"/>
                 

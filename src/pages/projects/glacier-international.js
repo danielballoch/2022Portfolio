@@ -101,14 +101,14 @@ const GlacierPage = () => {
                 <p>Testimonial: "Daniel delivered above and beyond for us with a highly professional end to end service. A high performance website was the delivered result which expressed clear communication to our customers about our product, services and a hassle free payment gateway as our main call to action for marketing. We enjoyed the development process and ongoing support is appreciated so thank you from myself and the Glacier International team."</p>
                 <br/>
                 <h2>Context & Aim</h2>
-                <p>Malcom came to me with a basic website that he wasn't really happy with. It had a simple ActiveCampaign form questioniere to gather customers custom Tundra orders, terms and conditions and a photo or two.</p>
+                <p>Malcom came to me with a basic website that he wasn't really happy with. It had a simple ActiveCampaign form questionnaire to gather customers' custom Tundra orders, terms and conditions, and a photo or two.</p>
                 <p>He really wanted a more professional design and interface for customers. Notably a "Build Your Tundra" page, including live prices and color options, for the new 2023 range of Tundra & Sequoia on their way.</p>
                 <p>We talked pricing, went through a full discovery process over zoom including business questions, timeframe, customer profiles, competitor research etc, and signed a contract.</p>
                 <br/>
                 <h2>Design</h2>
                 <p>As part of the discovery process I created three designs with brand attributes to present to Malcom. He would pick or combine elements into one design serving as a reference point for the tone/design of the project.</p>
                 <StaticImage src="../../images/projects/StyleScapes.PNG" className="icon"/>
-                <p>StyleScape #2 was selected and I continued creating a sitemap, wireframe options, gathered feedback and then draft designs, feedback, final designs. Malcom liked majority of my designs and ideas off the bat so I only had to make minor adjustments before we reached our final designs.</p>
+                <p>StyleScape #2 was selected and I continued creating a sitemap, wireframe options, gathered feedback, and then draft designs, feedback, and final designs. Malcom liked the majority of my designs and ideas off the bat so I only had to make minor adjustments before we reached our final designs.</p>
                 <br/>
                 <h2>Development</h2>
                 <p>Once the design was set I created the project locally on Visual Studio Code, uploaded to github & netlify, and got to work.</p>
