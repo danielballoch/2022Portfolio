@@ -118,6 +118,7 @@ const GlacierPage = () => {
                 <p>The initial development stage was fairly straight forward. I just coded to the design.</p>
                 <p>Malcom wasn't sure if he wanted online payments because of the transaction costs and if he did what he would use, and wasn't 100% on which CRM he would use.</p>
                 <p>I did my best to understand his situation and advise on his options here. We landed on ActiveCampaign and Xero, and although I hadn't worked with either (or the Google Places API) I was able to read through their documentation, run tests with Postman and demo pages/accounts, adjust to feature requests, and get everything up and running without too many issues.</p>
+                <p>These were added to the project using Gatsby serverless functions, which is an Express-like architecture for building Node.js APIs (I used JavaScript for ActiveCampaign/sendgrid and TypeScript for Xero).</p>
                 <p>All code is availible online at: <a href="https://github.com/danielballoch/GlacierInternational" target="_blank">https://github.com/danielballoch/GlacierInternational</a></p>
                 <p>For more info on the logistics of the website view my resume or get in touch at daniel@thoughtfulhq.com and I'd be happy to answer any questions.</p>
             </div>

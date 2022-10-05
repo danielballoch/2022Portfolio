@@ -30,8 +30,8 @@ export default function Nav({showSocial}){
     console.log("side:",showSocial)
     return(
         <NavDiv>
-            <a className={showSocial === false? "hide" : ""} href="https://github.com/danielballoch" target="_blank"><StaticImage width={50} src="../images/social/githubRe.png"/></a>
-            <a className={showSocial === false? "hide" : ""} href="https://www.linkedin.com/in/danielpatrickballoch/" target="_blank"><StaticImage width={50} src="../images/social/linkediniconRe.png"/></a>
+            <a className={showSocial === false? "hide" : ""} href="https://github.com/danielballoch" target="_blank"><StaticImage width={50} src="../images/social/github-icon.png"/></a>
+            <a className={showSocial === false? "hide" : ""} href="https://www.linkedin.com/in/danielpatrickballoch/" target="_blank"><StaticImage width={50} src="../images/social/linkedin-icon.png"/></a>
             {/* <a className={showSocial === false? "hide" : ""} href="https://dribbble.com/danielballoch" target="_blank"><StaticImage width={50} src="../images/social/dribbleiconRe.png"/></a> */}
         </NavDiv>
     )
