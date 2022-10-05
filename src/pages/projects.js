@@ -39,7 +39,7 @@ h1 {
 
 export default function Projects(){
     return(
-        <Layout showSocial={false}>
+        <Layout showSocial={false} title={"Daniel Balloch | Project Page"}>
             <Wrapper>
                 <div className="image">
                         <Video videoSrcURL={GlacierVideo} videoTitle="Glacier Project Video"/>

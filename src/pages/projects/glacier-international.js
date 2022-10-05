@@ -82,7 +82,7 @@ button {
 
 const GlacierPage = () => {
     return (
-      <Layout showSocial={false}>
+      <Layout showSocial={false} title={"Daniel Balloch | Glacier International Project"}>
       <ProjectDiv>
             <div className="glacier-video">
                 <Video videoSrcURL={GlacierVideo} videoTitle="Glacier Project Video"/>

@@ -82,7 +82,7 @@ button {
 
 const GlacierPage = () => {
     return (
-      <Layout showSocial={false}>
+      <Layout showSocial={false} title={"Daniel Balloch | Rob Quin Project"}>
             <ProjectDiv>
                     <StaticImage className="rq-image" src="../images/projects/robquin.png" width={900}/>
                     <div className="project-text">
