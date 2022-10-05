@@ -6,9 +6,11 @@ import resume from "../../static/DanielBallochResume2022.pdf"
 const HeroDiv = styled.div`
 height: 100vh;
 display: flex;
+@media(max-width: 500px){
+    padding: 20px;
+}
     div {
         @media(max-width: 500px){
-            padding: 20px;
             margin: auto;
             p {
                 max-width: 300px !important;
