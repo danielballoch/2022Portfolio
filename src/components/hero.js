@@ -52,6 +52,7 @@ display: flex;
 }
 `
 
+
 export default function Hero (){
     return(
         <div style={{ display: "grid"}}>
