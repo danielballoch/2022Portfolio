@@ -61,8 +61,8 @@ export default function About (){
         <AboutDiv id="about">
             <div className="text-content">
                 <h1>About Me</h1>
-                <p>I first got interested in web design and development around 2018, and have been learning on and off, while contracting and working other jobs, since then.</p>
-                <p>I've done a few freelance websites for clients, under the name 'thoughtfulHQ', but have decided I want to find a junior role/front end development role in an already established business. This way I can commit to development full time, learn from like-minded people, and make a real career out of it. </p>
+                <p>I first got interested in web design and development around 2018, and have been learning and freelancing, while contracting and working other jobs, since then.</p>
+                <p>I've done websites for clients, under the name 'thoughtfulHQ', but have decided I want to find a front end development role in an already established business. This way I can commit to development full time, build my skills, and learn from like-minded people.</p>
                 <p>Technologies I've been working with:</p>
                 <div className="tech"> 
                     <div className="row">

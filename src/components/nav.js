@@ -156,9 +156,9 @@ export default function Nav(){
     const [MenuOpen, setMenuOpen] = useState(false);
 
 
-    if (typeof window !== `undefined`) {
         useEffect(() => {
-        if (typeof window !== `undefined`) {
+        if (typeof window !== `undefined` && window.onscroll !== offset) {
+            console.log("running")
             window.onscroll = () => {
                 setOffset(window.scrollY);
                 // console.log(offset)
@@ -176,9 +176,8 @@ export default function Nav(){
                 }
             }
         }
-        }, [window.onscroll])
-    }
-    // console.log(scrollUp)
+        })
+
     return(
         <NavDiv >
             <div className={scrollUp && initial? "NavBar Scroll Initial" : scrollUp? "NavBar Scroll" : "NavBar"}>
