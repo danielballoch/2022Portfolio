@@ -90,7 +90,7 @@ const GlacierPage = () => {
             <div className="project-text">
                 <StaticImage src="../images/projects/GlacierIcon.png" className="icon"/>
                 <div className="">
-                    <p>Tools: HTML, CSS, Gatsby.js, React, node.js, TypeScript, Xero API, Sendgrid API, Google Re-captcha.</p>
+                    <p>Tools: HTML, CSS, Gatsby.js, React, node.js, TypeScript, Xero API, Sendgrid API, Google Re-captcha, Google Places.</p>
                     <a href="https://glacier.nz" target="_blank"><p>Live Site: https://www.glacier.nz</p></a>
                 </div>
             </div>
