@@ -77,7 +77,7 @@ export default function Hero (){
                         <h1>Daniel Balloch.</h1>
                         <h1>I make websites.</h1>
                         <p>I'm a front end developer and founder of thoughtfulHQ, a small web development agency in New Zealand.</p>
-                        <a href={resume} target="_blank" rel="noopener noreferrer"><button ><b>Here's my Resume</b></button></a>
+                        <a href={resume} target="_blank" rel="noopener noreferrer"><button><b>Here's my Resume</b></button></a>
                     </div>
             </HeroDiv>
         </div>
