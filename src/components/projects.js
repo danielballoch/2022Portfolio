@@ -84,7 +84,7 @@ export default function Projects (){
     return(
         <ProjectDiv id="projects">
             <h1>Featured Projects</h1>
-            <StyledLink to="/projects/glacier-international" >
+            <StyledLink to="/projects/glacier-international">
                 {/* <StaticImage src="../images/projects/glacier.png" width={900}/> */}
                 <div className="project">
                     <div className="glacier-video">

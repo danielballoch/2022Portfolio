@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.danielballoch.com`
   },
-  plugins: ["gatsby-plugin-emotion", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
+  plugins: ["gatsby-plugin-emotion", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap","gsap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/favicon.png"
@@ -20,7 +20,8 @@ module.exports = {
         quality: 100,
       }
     }
-  }, "gatsby-transformer-sharp", {
+  }, "gatsby-transformer-sharp",
+   {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
