@@ -1,13 +1,11 @@
-import { React } from "react"
+import { React, useState, useEffect, useLayoutEffect, useRef } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from '@emotion/styled';
-import GlacierIcon from "../images/projects/GlacierIcon.png";
-import GlacierBG from "../images/projects/glacier.png";
-import RobQuinIcon from "../images/projects/RobQuinIcon.png";
-import RobQuinBG from "../images/projects/robquin.png";
 import GlacierVideo from "../images/projects/GlacierVideoCrop.mp4"
 import Video from "../components/video"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 const StyledLink = styled(Link)`
 text-decoration: none;
@@ -81,12 +79,30 @@ button {
 
 
 export default function Projects (){
+    const ref2 = useRef(null);
+    useLayoutEffect(() => {
+        const element = ref2.current;
+        let scrollT = {
+            trigger: ".p1",
+            end: "center+ 200px",
+            scrub: true,
+            delay: .3
+          };
+        gsap.fromTo(element.querySelector(".p1"),{opacity: 0, y: +40, x: -40},{opacity: 1, y: 0, x: 0, scrollTrigger: scrollT});
+        let scrollT2 = {
+            trigger: ".p2",
+            end: "center+200px",
+            scrub: true,
+            delay: .3
+          };
+        gsap.fromTo(element.querySelector(".p2"),{opacity: 0, y: +40, x: +40},{opacity: 1, y: 0, x: 0, scrollTrigger: scrollT2});
+    })
     return(
-        <ProjectDiv id="projects">
+        <ProjectDiv id="projects" ref={ref2}>
             <h1>Featured Projects</h1>
             <StyledLink to="/projects/glacier-international">
                 {/* <StaticImage src="../images/projects/glacier.png" width={900}/> */}
-                <div className="project">
+                <div className="project p1">
                     <div className="glacier-video">
                         <Video videoSrcURL={GlacierVideo} videoTitle="Glacier Project Video"/>
                     </div>
@@ -100,7 +116,7 @@ export default function Projects (){
                 </div>
             </StyledLink>
             <StyledLink to="/projects/rob-quin">
-                <div className="project project-last">
+                <div className="project project-last p2">
                     <StaticImage className="rq-image" src="../images/projects/robquin.png" width={900}/>
                     <div className="project-text">
                         <StaticImage src="../images/projects/RobQuinIcon.png" className="icon"/>

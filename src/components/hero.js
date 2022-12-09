@@ -1,7 +1,9 @@
-import { React } from "react"
+import { React, useState, useEffect, useLayoutEffect, useRef } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from '@emotion/styled';
 import resume from "../../static/DanielBallochResume2022.pdf"
+import { gsap } from "gsap"
+
 
 const HeroDiv = styled.div`
 height: 100vh;
@@ -54,8 +56,13 @@ display: flex;
 
 
 export default function Hero (){
+    const ref1 = useRef(null);
+    useLayoutEffect(() => {
+        const element = ref1.current;
+        gsap.fromTo(element.querySelector(".hero-p1"),{opacity: 0, y: -40,},{opacity: 1, y: 0, duration: 2});
+    })
     return(
-        <div style={{ display: "grid"}}>
+        <div style={{ display: "grid"}} ref={ref1}>
             <StaticImage  
                     style={{
                     gridArea: "1/1",
@@ -72,7 +79,7 @@ export default function Hero (){
                     formats={["auto", "webp", "avif"]}
             />
             <HeroDiv id="home" style={{ display: "grid",gridArea: "1/1", maxHeight: 900, marginTop: 0,position: "relative",}}>
-                    <div>
+                    <div className="hero-p1">
                         <p>Hello, my name is</p>
                         <h1>Daniel Balloch.</h1>
                         <h1>I make websites.</h1>

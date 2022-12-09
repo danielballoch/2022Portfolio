@@ -2,6 +2,7 @@ import { React, useState, useEffect, useLayoutEffect, useRef } from "react"
 import styled from '@emotion/styled';
 import { StaticImage } from "gatsby-plugin-image"
 import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 const AboutDiv = styled.div`
 @media(max-width: 900px){
@@ -53,64 +54,48 @@ img {
     border-radius: 20px;
 
 }
-.box {
-    margin: 30px;
-    background-color: red;
-    width: 40px;
-    height: 40px;
-}
-.circle {
-    margin: 30px;
-    background-color: blue;
-    width: 40px;
-    height: 40px;
-    border-radius: 100px;
-}
 `
 const techlist1 = ["Adobe XD", "CSS", "React", "Next.js"]
 const techlist2 = ["HTML", "JavaScript", "Gatsby.js", "Node.js","TypeScript"]
 
-// const Box = ({ children, className, anim }) => {
-//     return <div className={"box " + className } data-animate={ anim }>{children}</div>;
-//   };
-//   const Circle = ({ children, className, anim }) => {
-//     return <div className={"circle " + className } data-animate={ anim }>{children}</div>;
-//   };
-
 export default function About (){
-    // const [reversed, setReversed] = useState(false);
-    // const app = useRef();
-    // const tl = useRef();
-  
-    // useLayoutEffect(() => {
-    //   const ctx = gsap.context(() => {
-    //     console.log("creating timeline");
-    //     tl.current && tl.current.progress(0).kill();
-    //     tl.current = gsap.timeline()
-    //       .to(".box", {rotate: 360})
-    //       .to(".circle", {x: 100});
-    //   }, app);
-    // }, []);
-
-    // useEffect(() => {
-    //     // toggle the direction of our timeline
-    //     console.log("toggling reverse to", reversed);
-    //     tl.current.reversed(reversed);    
-    //   }, [reversed]);
-
+        gsap.registerPlugin(ScrollTrigger);
+        const ref = useRef(null);
+        useEffect(() => {
+          const element = ref.current;
+          let scrollT = {
+            trigger: element.querySelector(".first"),
+            start: "top top",
+            end: "+=800",
+            scrub: true,
+            delay: .3
+          };
+          gsap.fromTo(element.querySelector(".first-paragraph"),{opacity: 0, x: -200,},{opacity: 1, x: 0, scrollTrigger: scrollT});
+          gsap.fromTo(element.querySelector(".second-paragraph"),{opacity: 0, x: -300,},{opacity: 1, x: 0, scrollTrigger: scrollT});
+          gsap.fromTo(element.querySelector(".third-paragraph"),{opacity: 0, x: -500,},{opacity: 1, x: 0, scrollTrigger: scrollT});
+          gsap.fromTo(element.querySelector(".forth-paragraph"),{opacity: 0, x: -900,},{opacity: 1, x: 0, scrollTrigger: scrollT});
+          gsap.fromTo(element.querySelector(".fith-paragraph"),{opacity: 0, x: -1400,},{opacity: 1, x: 0, scrollTrigger: scrollT});
+          gsap.fromTo(
+            element.querySelector("#gsap-logo"),{
+                opacity: 0, y: +100},{
+                opacity: 1, y: 0,
+                scrollTrigger: {
+                    trigger: element.querySelector(".first"),
+                    start: "#gsap-logo",
+                    end: "+=800",
+                    scrub: true
+                    }
+            }
+          );
+        }, []);
     return(
-        <AboutDiv id="about">
-            {/* <div className="app" ref={app}>
-                <button onClick={() => setReversed(!reversed)}>Toggle</button>
-                <Box/>
-                <Circle/>
-            </div> */}
-            <div className="text-content" >
-                <h1>About Me</h1>
-                <p>I first got interested in web design and development around 2018 and have been learning and freelancing as a secondary source of income since then.</p>
-                <p>I've made websites for clients under the name 'thoughtfulHQ' and written small bits of code contracting to other agencies, but have decided I want to find a front end development role in an already established business. This way I can commit to development full time, build my skills, and learn from like-minded people.</p>
-                <p>Technologies I've been working with:</p>
-                <div className="tech"> 
+        <AboutDiv id="about" ref={ref} className="first">
+            <div className="text-content " >
+                <h1 className="first-paragraph">About Me</h1>
+                <p className="second-paragraph">I first got interested in web design and development around 2018 and have been learning and freelancing as a secondary source of income since then.</p>
+                <p className="third-paragraph">I've made websites for clients under the name 'thoughtfulHQ' and written small bits of code contracting to other agencies, but have decided I want to find a front end development role in an already established business. This way I can commit to development full time, build my skills, and learn from like-minded people.</p>
+                <p className="forth-paragraph">Technologies I've been working with:</p>
+                <div className="tech fith-paragraph"> 
                     <div className="row">
                        {techlist1.map((item) => 
                         <div className="item"><div className="arrow"/>{item}</div>
@@ -124,7 +109,7 @@ export default function About (){
                     
                 </div>
             </div>
-            <div className="image-div">
+            <div className="image-div" id="gsap-logo">
                 <StaticImage src="../images/tongareroCrossing.jpg" alt="Daniel Balloch on top of Togariro Crossing" width={450}/>
             </div>
         </AboutDiv>
